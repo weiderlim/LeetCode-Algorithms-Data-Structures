@@ -8,16 +8,16 @@ class Solution(object):
         arr_full = []
         deck_sorted = sorted(deck)
 
-        # eliminate single case of n = 1
+        # eliminate case of n = 1
         if len(deck_sorted) == 1:
             return deck
 
-        # if odd no of elements
+        # if odd no of cards
         if len(deck_sorted) % 2 != 0:
             first_list = deck_sorted[:int((len(deck_sorted) + 1) / 2)]
             second_list = deck_sorted[int((len(deck_sorted) + 1) / 2):][::-1]
         
-        # else even
+        # if even no of cards
         else:
             first_list = deck_sorted[:int((len(deck_sorted) / 2))]
             second_list = deck_sorted[int((len(deck_sorted) / 2)):][::-1]
